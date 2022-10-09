@@ -3,6 +3,9 @@ pipeline {
   stage('Clean Workspace'){
     cleanWs()
   }
+  agent {
+    docker { image 'node:latest' }
+  }
   stages {
     stage('Install') {
       steps { sh 'npm install' }
@@ -23,5 +26,4 @@ pipeline {
       steps { sh 'npm run-script build' }
     }
   } 
-  }
 }
