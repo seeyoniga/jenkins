@@ -3,7 +3,7 @@ pipeline {
   stage('Clean Workspace'){
     cleanWs()
   }
-  
+  }
   stages {
     stage('Install') {
       steps { sh 'npm install' }
@@ -23,5 +23,5 @@ pipeline {
     stage('Build') {
       steps { sh 'npm run-script build' }
     }
-  } }
+  } 
 }
