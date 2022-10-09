@@ -1,7 +1,7 @@
 pipeline {
       agent {
       any { image 'node:latest'
-      tools {nodejs "nodejs"} }
+            nodejs 'nodejs' }
      }
     stages {
       stage('Install') {
