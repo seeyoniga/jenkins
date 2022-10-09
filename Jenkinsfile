@@ -1,8 +1,4 @@
 pipeline {
-  node (label: 'build && linux') {
-  stage('Clean Workspace'){
-    cleanWs()
-  }
   agent {
     docker { image 'node:latest' }
   }
