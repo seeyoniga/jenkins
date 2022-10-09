@@ -3,7 +3,7 @@ pipeline {
   stage('Clean Workspace'){
     cleanWs()
   }
-
+  }
       agent {
       docker { image 'node:latest' }
      }
@@ -27,5 +27,4 @@ pipeline {
        steps { sh 'npm run-script build' }
       }
     } 
-  }
 }
