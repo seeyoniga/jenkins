@@ -1,4 +1,8 @@
 pipeline {
+  node (label: 'build && linux') {
+  stage('Clean Workspace'){
+    cleanWs()
+  }
   stages {
     stage('Install') {
       steps { sh 'npm install' }
